@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/minimap/minimap.gd" type="Script" id=1]
+[ext_resource path="res://addons/minimap/show_on_minimap.gd" type="Script" id=2]
+[ext_resource path="res://icon.svg" type="Texture" id=3]
+[ext_resource path="res://addons/minimap/icons/house.svg" type="Texture" id=4]
+[ext_resource path="res://addons/minimap/icons/arrow.svg" type="Texture" id=5]
+[ext_resource path="res://addons/minimap/icons/circle.svg" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Circle"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6, 3.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -419.008, -232.784 ), Vector2( 382.308, -176.723 ), Vector2( 119.051, 221.613 ), Vector2( -419.008, -232.784 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Circle"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6, 3.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8.27374, 214.488 ), Vector2( -223.714, -175.463 ), Vector2( 226.144, -147.544 ), Vector2( -8.27374, 214.488 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 3.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 225.0, 44.9999, 165.0, 225.0 ]
+}
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 9.50693, 7.42847 )
+current = true
+
+[node name="MovingSprite" type="Sprite" parent="."]
+position = Vector2( -419.008, -217.665 )
+scale = Vector2( 3.12612, 3.12612 )
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingSprite"]
+autoplay = "Circle"
+anims/Circle = SubResource( 1 )
+
+[node name="ShowOnMinimap" type="Node" parent="MovingSprite"]
+script = ExtResource( 2 )
+use_sprite = true
+
+[node name="RotatingSprite" type="Sprite" parent="."]
+position = Vector2( -8.27374, 214.488 )
+rotation = 3.92699
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RotatingSprite"]
+autoplay = "Circle"
+anims/Circle = SubResource( 2 )
+
+[node name="ShowOnMinimap" type="Node" parent="RotatingSprite"]
+script = ExtResource( 2 )
+color = Color( 1, 0.141176, 0, 1 )
+icon = ExtResource( 5 )
+rotating = true
+
+[node name="StaticSprite" type="Sprite" parent="."]
+position = Vector2( 19.0891, 40.1777 )
+texture = ExtResource( 3 )
+
+[node name="ShowOnMinimap" type="Node" parent="StaticSprite"]
+script = ExtResource( 2 )
+color = Color( 0.329412, 0.584314, 0.94902, 1 )
+icon = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Minimap" type="Panel" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -243.0
+margin_right = 243.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+camera_path = NodePath("../../Camera2D")
+world_size = Vector2( 2048, 2048 )
+world_origin = Vector2( -1024, -1024 )
+icon_scale = 0.5

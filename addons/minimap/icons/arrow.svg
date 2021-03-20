@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:export-filename="/home/djrm/Projects/godot/tools/editor/icons/icon_center_container.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="arrow.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.313709"
+     inkscape:cx="22.077316"
+     inkscape:cy="8.0545897"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-center="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1200"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true"
+     inkscape:snap-grids="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3336"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.74e-5,-1014.3622)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.9999671px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 16.000027,1015.3622 -14.9999996,30 14.9999996,-8 15,8 z"
+       id="path814"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>
